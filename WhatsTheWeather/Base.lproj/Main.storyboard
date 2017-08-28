@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatsTheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marc-guellerin-151177.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-ow-daW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPq-rK-izG">
+                                <rect key="frame" x="70" y="66" width="176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city : eg.  San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ys4-8X-C7T">
+                                <rect key="frame" x="16" y="106" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cdt-ww-Zde"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T4-CS-5we">
+                                <rect key="frame" x="124" y="170" width="68" height="29"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pzm-fc-EIe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt4-2g-Czc">
+                                <rect key="frame" x="16" y="241" width="288" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ys4-8X-C7T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Hn-xL-DSh"/>
+                            <constraint firstItem="Mt4-2g-Czc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4rM-9o-DmW"/>
+                            <constraint firstItem="VPq-rK-izG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="54" id="7ad-9p-do7"/>
+                            <constraint firstItem="ef2-ow-daW" firstAttribute="top" secondItem="VPq-rK-izG" secondAttribute="bottom" constant="-87" id="Du0-0u-Adz"/>
+                            <constraint firstAttribute="trailing" secondItem="ef2-ow-daW" secondAttribute="trailing" id="ETK-ps-zap"/>
+                            <constraint firstItem="ef2-ow-daW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FqU-on-YNd"/>
+                            <constraint firstItem="ys4-8X-C7T" firstAttribute="top" secondItem="VPq-rK-izG" secondAttribute="bottom" constant="19" id="Iz1-CL-68S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VPq-rK-izG" secondAttribute="trailing" constant="58" id="Rvu-D1-XU3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1T4-CS-5we" secondAttribute="trailing" constant="112" id="Ryp-pe-xiY"/>
+                            <constraint firstItem="ef2-ow-daW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uch-Ir-yWU"/>
+                            <constraint firstItem="Mt4-2g-Czc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VCG-fC-5jW"/>
+                            <constraint firstItem="Mt4-2g-Czc" firstAttribute="top" secondItem="1T4-CS-5we" secondAttribute="bottom" constant="42" id="VfH-hb-MWc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ef2-ow-daW" secondAttribute="bottom" id="ihj-Dx-qZv"/>
+                            <constraint firstItem="1T4-CS-5we" firstAttribute="top" secondItem="ys4-8X-C7T" secondAttribute="bottom" constant="34" id="pzw-4I-7TO"/>
+                            <constraint firstItem="1T4-CS-5we" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="108" id="rs5-BZ-ZLe"/>
+                            <constraint firstItem="ys4-8X-C7T" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rvr-VH-T0r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forecastLabel" destination="Mt4-2g-Czc" id="ljP-cD-IC6"/>
+                        <outlet property="textField" destination="ys4-8X-C7T" id="dct-jE-dEf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="marc-guellerin-151177.jpg" width="1000" height="667"/>
+    </resources>
+</document>
